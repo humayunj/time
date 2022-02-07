@@ -56,16 +56,16 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.values}>
-          <h2 className={styles.title}>
+          <h2 key={1} className={styles.title}>
             {vals.days} Days
           </h2>
-          <h2 className={styles.title}>
+          <h2 key={2} className={styles.title}>
             {vals.hours} Hours
           </h2>
-          <h2 className={styles.title}>
+          <h2 key={3} className={styles.title}>
             {vals.mins} Minutes
           </h2>
-          <h2 className={styles.title}>
+          <h2 key={4} className={styles.title}>
             {vals.secs} Seconds
           </h2>
 
