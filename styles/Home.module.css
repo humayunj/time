@@ -2,6 +2,23 @@
   padding: 0 2rem;
 }
 
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60pt;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -12,6 +29,62 @@
   align-items: center;
 }
 
+.values {
+  display: flex;
+  gap:20px;
+  flex-wrap: wrap;
+  color:white;
+}
+
+
+@media (max-width: 600px) {
+  .values {
+    width: 100%;
+    flex-direction: column;
+    
+  }
+  .title {
+    font-size: 35pt;
+  }
+}
+
+
+.bg {
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100vw;
+  height:100vh;
+  overflow: hidden;
+  z-index: -10;
+  
+}
+.bgimg {
+  filter:saturate(1.5);
+}
+.bg::after {
+  content: '';
+  background:  rgba(7, 2, 39, 0.8);
+  position: absolute;
+  left:0;
+  top:0;
+  width:100vw;
+  height:100vH;
+}
+.gridOverlay {
+
+  background-image:  url("../public/grid.svg") ;
+  background-size:50px;
+  background-repeat: repeat;
+  position: absolute;
+  opacity:0.96;
+  z-index: 10;
+  left:0;
+  top:0;
+  width:100vw;
+  height:100vH;
+
+}
 .footer {
   display: flex;
   flex: 1;
@@ -31,23 +104,6 @@
 .title a {
   color: #0070f3;
   text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
 }
 
 .description {
